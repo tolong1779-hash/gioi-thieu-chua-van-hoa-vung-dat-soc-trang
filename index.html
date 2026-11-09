@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIỚI THIỆU CHÙA VĂN HÓA 3 DÂN TỘC Ở SÓC TRĂNG</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ed;
+    color: #263c32;
+    line-height: 1.7;
+}
+
+header {
+    background: #173d35;
+    color: white;
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #e7c47e;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e7c47e;
+}
+
+.hero {
+    min-height: 570px;
+    background:
+    linear-gradient(rgba(10,35,27,.72),rgba(10,35,27,.65)),
+    url("https://dulichviet.com.vn/images/bandidau/du-lich-chua-Khleang-soc-trang.jpg")
+    center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero small {
+    color: #e7c47e;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 65px);
+    margin: 25px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #d7ad62;
+    color: #173d35;
+    padding: 13px 27px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: white;
+}
+
+section {
+    padding: 75px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span {
+    color: #a67c39;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.section-title h2 {
+    color: #173d35;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.section-title p {
+    color: #68756e;
+}
+
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+}
+
+.intro strong {
+    color: #a67c39;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000012;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.card-content small {
+    color: #aa813e;
+    font-weight: bold;
+}
+
+.card-content h3 {
+    color: #173d35;
+    font-size: 23px;
+    margin: 8px 0;
+}
+
+.card-content p {
+    color: #68756e;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    color: #a67c39;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.details {
+    background: white;
+}
+
+.temple {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 45px 0;
+    border-bottom: 1px solid #e5dfd2;
+}
+
+.temple img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.temple h3 {
+    color: #173d35;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.temple p {
+    color: #59675f;
+    margin-bottom: 15px;
+}
+
+.tag {
+    color: #a67c39;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.fact {
+    display: inline-block;
+    background: #f0eadc;
+    padding: 7px 12px;
+    margin: 4px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.note {
+    background: #fbf5e9;
+    border-left: 3px solid #d7ad62;
+    padding: 13px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.gallery {
+    background: #173d35;
+    color: white;
+}
+
+.gallery .section-title h2 {
+    color: white;
+}
+
+.gallery .section-title p {
+    color: #d6ded8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+.video-box {
+    background: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 7px;
+}
+
+.video-box h3 {
+    color: #173d35;
+    margin-bottom: 15px;
+}
+
+.video-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.video-links a {
+    background: #173d35;
+    color: white;
+    padding: 12px 17px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.video-links a:hover {
+    background: #d7ad62;
+    color: #173d35;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.value {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-top: 4px solid #d7ad62;
+}
+
+.value h3 {
+    color: #173d35;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #102c26;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    color: #e7c47e;
+    margin-bottom: 15px;
+}
+
+footer p {
+    max-width: 750px;
+    margin: 10px auto;
+    color: #d4ddd6;
+}
+
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #d7ad62;
+    color: #173d35;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media(max-width:850px) {
+    .cards, .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .temple {
+        grid-template-columns: 1fr;
+    }
+
+    .values {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:550px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .cards, .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">DI SẢN SÓC TRĂNG</div>
+
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#intro">Giới thiệu</a>
+        <a href="#temples">Ba ngôi chùa</a>
+        <a href="#gallery">Hình ảnh</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+</header>
+
+<!-- TRANG CHỦ -->
+
+<div class="hero" id="home">
+    <div class="hero-content">
+        <small>HÀNH TRÌNH KHÁM PHÁ DI SẢN</small>
+
+        <h1>GIỚI THIỆU <br>
+        CÁC NGÔI CHÙA TIÊU BIỂU ĐẠI DIỆN CHO 3 DÂN TỘC TRÊN VÙNG ĐẤT SÓC TRĂNG</h1>
+
+        <p>
+            Khám phá vẻ đẹp kiến trúc, tín ngưỡng và
+            những giá trị văn hóa đặc sắc qua ba
+            công trình tâm linh tiêu biểu của Sóc Trăng.
+        </p>
+
+        <a href="#temples" class="btn">
+            KHÁM PHÁ NGAY ↓
+        </a>
+    </div>
+</div>
+
+<!-- GIỚI THIỆU -->
+
+<section id="intro">
+
+    <div class="section-title">
+        <span>GIỚI THIỆU</span>
+        <h2>Một vùng đất – Nhiều sắc màu văn hóa</h2>
+    </div>
+
+    <div class="intro">
+
+        <p>
+            Sóc Trăng xưa là vùng đất hội tụ ba cộng đồng
+            dân tộc <strong>Kinh – Hoa – Khmer</strong>,
+            cùng chung sống, giao lưu và phát triển
+            qua nhiều thế hệ.
+        </p>
+
+        <br>
+
+        <p>
+            Những công trình chùa chiền không chỉ là
+            nơi sinh hoạt tín ngưỡng mà còn lưu giữ
+            những giá trị lịch sử, nghệ thuật kiến trúc
+            và bản sắc văn hóa của từng cộng đồng.
+        </p>
+
+        <br>
+
+        <p>
+            Trong hành trình này, chúng ta sẽ cùng tìm hiểu
+            ba địa điểm nổi bật: Chùa Som Rong,
+            Thiền viện Trúc Lâm Sóc Trăng và Chùa La Hán.
+        </p>
+
+    </div>
+</section>
+
+<!-- BA NGÔI CHÙA -->
+
+<section style="background:#fffdf8" id="temples">
+
+    <div class="section-title">
+        <span>ĐIỂM ĐẾN NỔI BẬT</span>
+        <h2>Khám phá ba ngôi chùa</h2>
+        <p>Ba công trình – Ba dấu ấn kiến trúc và tín ngưỡng.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://mia.vn/media/uploads/blog-du-lich/chua-som-rong-cung-buc-tuong-phat-nam-gay-choang-ngop-01-1664901878.jpeg"
+            alt="Chùa Som Rong">
+
+            <div class="card-content">
+                <small>PHẬT GIÁO NAM TÔNG KHMER</small>
+                <h3>Chùa Som Rong</h3>
+
+                <p>
+                    Nổi bật với kiến trúc Khmer độc đáo
+                    và tượng Phật Thích Ca nhập Niết-bàn
+                    quy mô lớn.
+                </p>
+
+                <a href="#somrong">TÌM HIỂU THÊM →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://zoomtravel.vn/upload/images/thien-vien-truc-lam-soc-trang-4.jpg"
+            alt="Thiền viện Trúc Lâm Sóc Trăng">
+
+            <div class="card-content">
+                <small>THIỀN PHÁI TRÚC LÂM</small>
+                <h3>Thiền viện Trúc Lâm</h3>
+
+                <p>
+                    Công trình Phật giáo mang kiến trúc
+                    truyền thống Việt Nam, tạo nên
+                    không gian thanh tịnh.
+                </p>
+
+                <a href="#tructram">TÌM HIỂU THÊM →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://tourbonphuong.com/_next/image?url=https%3A%2F%2Fapi.tourbonphuong.com%2Fuploads%2Fmedia%2Fcontent%2F05-ec228417.webp&w=828&q=75"
+            alt="Chùa La Hán">
+
+            <div class="card-content">
+                <small>DẤU ẤN VĂN HÓA HOA</small>
+                <h3>Chùa La Hán</h3>
+
+                <p>
+                    Công trình gây ấn tượng với
+                    kiến trúc mang phong cách Trung Hoa
+                    và cảnh quan độc đáo.
+                </p>
+
+                <a href="#lahan">TÌM HIỂU THÊM →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- NỘI DUNG CHI TIẾT -->
+
+<section class="details">
+
+    <div class="section-title">
+        <span>KHÁM PHÁ CHI TIẾT</span>
+        <h2>Câu chuyện phía sau mỗi mái chùa</h2>
+    </div>
+
+    <!-- CHÙA SOM RONG -->
+
+    <div class="temple" id="somrong">
+
+        <img src="https://mia.vn/media/uploads/blog-du-lich/chua-som-rong-cung-buc-tuong-phat-nam-gay-choang-ngop-01-1664901878.jpeg"
+        alt="Tượng Phật nằm chùa Som Rong">
+
+        <div>
+
+            <div class="tag">01 · DẤU ẤN KHMER</div>
+
+            <h3>Chùa Som Rong</h3>
+
+            <p>
+                Chùa Som Rong có tên đầy đủ là
+                Bôtum Vong Sa Som Rong, tọa lạc tại
+                số 367 đường Tôn Đức Thắng,
+                thành phố Sóc Trăng trước đây.
+            </p>
+
+            <p>
+                Theo nhiều tư liệu, chùa được hình thành
+                khoảng năm 1785. Trải qua nhiều lần
+                trùng tu, ngôi chùa ngày nay mang vẻ đẹp
+                kiến trúc Khmer Nam Bộ đặc sắc.
+            </p>
+
+            <p>
+                Điểm nhấn nổi bật là tượng Phật Thích Ca
+                nhập Niết-bàn dài khoảng 63 mét,
+                tạo nên một công trình ấn tượng
+                đối với du khách.
+            </p>
+
+            <div class="fact">Kiến trúc Khmer</div>
+            <div class="fact">Khởi dựng khoảng 1785</div>
+            <div class="fact">Tượng Phật nhập Niết-bàn</div>
+
+            <div class="note">
+                Giá trị văn hóa: Chùa là nơi sinh hoạt
+                tín ngưỡng quan trọng của cộng đồng Khmer,
+                góp phần gìn giữ bản sắc văn hóa dân tộc.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- THIỀN VIỆN TRÚC LÂM -->
+
+    <div class="temple" id="tructram">
+
+        <img src="https://storage-phatsuonline-v2.sgp1.digitaloceanspaces.com/files/2024/07/10267029-f20b-4822-a11f-0524791c5bd3-crop.JPEG"
+        alt="Thiền viện Trúc Lâm Sóc Trăng">
+
+        <div>
+
+            <div class="tag">02 · PHẬT GIÁO VIỆT NAM</div>
+
+            <h3>Thiền viện Trúc Lâm Sóc Trăng</h3>
+
+            <p>
+                Thiền viện Trúc Lâm Sóc Trăng là công trình
+                Phật giáo thuộc Thiền phái Trúc Lâm Việt Nam.
+                Công trình được khởi công năm 2017
+                và khánh thành vào năm 2020.
+            </p>
+
+            <p>
+                Thiền viện có quy mô gần 6 ha,
+                gồm nhiều hạng mục như cổng tam quan,
+                chánh điện, lầu chuông, lầu trống,
+                bảo tháp và nhà tổ.
+            </p>
+
+            <p>
+                Với kiến trúc mang nét truyền thống
+                của chùa Việt, nơi đây tạo nên
+                không gian trang nghiêm, thanh tịnh
+                và hài hòa với cảnh quan.
+            </p>
+
+            <div class="fact">Thiền phái Trúc Lâm</div>
+            <div class="fact">Khởi công năm 2017</div>
+            <div class="fact">Khánh thành năm 2020</div>
+
+            <div class="note">
+                Giá trị văn hóa: Thiền viện góp phần
+                giới thiệu truyền thống Phật giáo Việt Nam
+                và tạo không gian sinh hoạt tâm linh
+                cho người dân.
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CHÙA LA HÁN -->
+
+    <div class="temple" id="lahan">
+
+        <img src="https://thuexe7chogiare.com/upload/news/chua-la-han-ngoi-chua-co-kien-truc-doc-dao-4338.jpg"
+        alt="Chùa La Hán Sóc Trăng">
+
+        <div>
+
+            <div class="tag">03 · DẤU ẤN NGƯỜI HOA</div>
+
+            <h3>Chùa La Hán</h3>
+
+            <p>
+                Chùa La Hán còn được gọi là Vĩnh Thiền Tự,
+                tọa lạc tại khu vực Cầu Đen,
+                thành phố Sóc Trăng trước đây.
+            </p>
+
+            <p>
+                Chùa được cộng đồng người Hoa xây dựng
+                vào năm 1952. Ban đầu, nơi đây chỉ là
+                một gian nhà tranh vách ván
+                để thờ Phật và các vị La Hán.
+            </p>
+
+            <p>
+                Công trình gây ấn tượng với kiến trúc
+                hai tầng, mái chồng lớp, các họa tiết
+                trang trí mang phong cách Trung Hoa.
+                Khuôn viên còn có hồ sen, cầu đá
+                và nhiều tiểu cảnh độc đáo.
+            </p>
+
+            <div class="fact">Tên khác: Vĩnh Thiền Tự</div>
+            <div class="fact">Xây dựng năm 1952</div>
+            <div class="fact">Kiến trúc Hoa</div>
+
+            <div class="note">
+                Giá trị văn hóa: Chùa là dấu ấn tín ngưỡng
+                của cộng đồng người Hoa, góp phần làm phong phú
+                đời sống văn hóa tại Sóc Trăng.
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- THƯ VIỆN HÌNH ẢNH -->
+
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+        <span>THƯ VIỆN ẢNH</span>
+        <h2>Vẻ đẹp kiến trúc và văn hóa</h2>
+        <p>Những hình ảnh về ba công trình tâm linh.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="https://mia.vn/media/uploads/blog-du-lich/chua-som-rong-cung-buc-tuong-phat-nam-gay-choang-ngop-01-1664901878.jpeg"
+        alt="Chùa Som Rong">
+
+        <img src="https://www.vacationtravel.com.vn/storage/photos/1/kh%C3%A1m%20ph%C3%A1%20vi%E1%BB%87t%20nam/mien%20tay/soctrang1.jpg"
+        alt="Kiến trúc chùa Som Rong">
+
+        <img src="https://zoomtravel.vn/upload/images/thien-vien-truc-lam-soc-trang-4.jpg"
+        alt="Thiền viện Trúc Lâm">
+
+        <img src="https://storage-phatsuonline-v2.sgp1.digitaloceanspaces.com/files/2024/07/10267029-f20b-4822-a11f-0524791c5bd3-crop.JPEG"
+        alt="Chánh điện Thiền viện">
+
+        <img src="https://thuexe7chogiare.com/upload/elfinder/thue-xe-o-to-tai-tien-thanh-du-lich-chua-la-han/lich-su-kien-truc-tham-quan-du-lich-chua-la-han-soc-trang.jpg"
+        alt="Chùa La Hán">
+
+        <img src="https://thuexe7chogiare.com/upload/news/chua-la-han-ngoi-chua-co-kien-truc-doc-dao-4338.jpg"
+        alt="Cảnh quan chùa La Hán">
+
+    </div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section>
+
+    <div class="section-title">
+        <span>GÓC KHÁM PHÁ</span>
+        <h2>Video về ba ngôi chùa</h2>
+        <p>Cùng tìm hiểu thêm qua các video tham quan.</p>
+    </div>
+
+    <div class="video-box">
+
+        <h3>Khám phá di sản văn hóa Sóc Trăng</h3>
+
+        <p>
+            Nhấn vào từng chủ đề để xem các video
+            giới thiệu trên YouTube.
+        </p>
+
+        <div class="video-links">
+
+            <a target="_blank"
+            href="https://youtu.be/ZvsuTEbMQEM?si=_sOt0yPEEmIsqW6O">
+                ▶ CHÙA SOM RONG
+            </a>
+
+            <a target="_blank"
+            href="https://youtu.be/JI1WrvIAjpY?si=saqx1k8WQxqzgrGY">
+                ▶ THIỀN VIỆN TRÚC LÂM
+            </a>
+
+            <a target="_blank"
+            href="https://youtu.be/40nD_74Ut3w?si=XYtibwqLz22gcSI4">
+                ▶ CHÙA LA HÁN
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- THÔNG ĐIỆP -->
+
+<section style="background:#eee7d9">
+
+    <div class="section-title">
+        <span>THÔNG ĐIỆP</span>
+        <h2>Gìn giữ những giá trị văn hóa</h2>
+    </div>
+
+    <div class="values">
+
+        <div class="value">
+            <h3>♥ TÔN TRỌNG</h3>
+            <p>
+                Tôn trọng sự đa dạng văn hóa,
+                tín ngưỡng và phong tục
+                của mỗi cộng đồng.
+            </p>
+        </div>
+
+        <div class="value">
+            <h3>✦ GÌN GIỮ</h3>
+            <p>
+                Chung tay bảo vệ di tích,
+                cảnh quan và những giá trị
+                truyền thống quý báu.
+            </p>
+        </div>
+
+        <div class="value">
+            <h3>✧ ĐOÀN KẾT</h3>
+            <p>
+                Phát huy tinh thần giao lưu,
+                thấu hiểu và gắn bó
+                giữa các dân tộc.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LIÊN HỆ -->
+
+<footer id="contact">
+
+    <h2>LỜI KẾT</h2>
+
+    <p>
+        Chùa Som Rong, Thiền viện Trúc Lâm Sóc Trăng
+        và Chùa La Hán mang những dấu ấn kiến trúc,
+        tín ngưỡng khác nhau.
+    </p>
+
+    <p>
+        Mỗi công trình đều góp phần tạo nên
+        vẻ đẹp văn hóa đa dạng của vùng đất Sóc Trăng xưa.
+        Tìm hiểu và trân trọng những di sản ấy
+        cũng chính là cách thế hệ trẻ gìn giữ
+        và tiếp nối bản sắc quê hương.
+    </p>
+
+    <br>
+    <br>
+
+    <p>© 2026 | ĐƯỢC TẠO VÀ THIẾT KẾ BỞI: NHÓM 1 - LỚP 12A10 - THPT HOÀNG DIỆU</p>
+
+</footer>
+
+<button class="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+</button>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Góc Thành Viên</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #FAF4EB;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header .sub-title {
+            color: #C6954B;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .header h1 {
+            color: #4A2810;
+            font-size: 42px;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .header .desc {
+            color: #7A7A7A;
+            font-size: 15px;
+        }
+
+        .login-card {
+            background-color: #FFFFFF;
+            width: 100%;
+            max-width: 440px;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .login-card h2 {
+            color: #4A2810;
+            font-size: 28px;
+            font-family: Georgia, 'Times New Roman', serif;
+            margin-bottom: 6px;
+        }
+
+        .login-card .sub-text {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #E2E8F0;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            border-color: #D3A257;
+        }
+
+        .form-group input::placeholder {
+            color: #94A3B8;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #D3A257;
+            color: #3B2005;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #c49348;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="sub-title">BẠN CÓ CÂU HỎI CẦN ĐƯỢC GIẢI ĐÁP?</div>
+        <h1>Đăng nhập</h1>
+        <p class="desc">HÃY LIÊN HỆ VỚI CHÚNG TÔI</p>
+    </div>
+
+    <div class="login-card">
+        <h2>Chào bạn!</h2>
+        <p class="sub-text">Điền thông tin để tiếp tục.</p>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Địa chỉ email</label>
+                <input type="email" id="email" placeholder="ban@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Đăng nhập</button>
+        </form>
+    </div>
+
+</body>
+</html>
